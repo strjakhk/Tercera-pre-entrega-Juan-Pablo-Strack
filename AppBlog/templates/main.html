@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main blog</title>
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inicio-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registro-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/posts-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/comentarios-styles.css' %}">
+</head>
+<body>
+    <nav>
+        <ul class="main-menu">
+            <li>
+                <a href="{% url 'inicio' %}">inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'registro' %}">registro</a>
+            </li>
+            <li>
+                <a href="{% url 'publicar-post' %}">posts</a>
+            </li>            
+            <li>
+                <a href="{% url 'comentarios' %}">comentarios</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- MAIN -->
+
+    <main>
+        {% block main_content %}
+
+        {% endblock %}
+    </main>
+
+    <!-- MAIN -->
+
+    <footer>
+        <section class="footer-section">
+            <ul>
+                <li>
+                    <a href="">Juan Pablo Strack</a>
+                </li>
+                <li>
+                    <a href="">contact@strjak.com</a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <ul>
+                <li>
+                    <a href="">1122333445</a>
+                </li>
+                <li>
+                    <a href="">@strjak.com</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    
+
+
+    <script src="{% static 'js/effects.js' %}"></script>    
+</body>
+</html>

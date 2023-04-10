@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block main_content %}
+
+<h1 id="main-title" class="title"></h1>
+
+<section class="main-content">
+    <table class="user-list">
+        <thead>
+            <tr>
+                <th>Usuarios activos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+    
+            <tr><td><span>{{user.user_name}}</span></td></tr>
+    
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="post-list">
+        <thead>
+            <tr>
+                <th>POSTS</th>
+                <th class="th-filter">
+                    <form action="/AppBlog/busqueda/" method="get"> {% csrf_token %}
+                        <input type="search" name="post-filter" placeholder=" buscar articulo">
+                        <input type="submit" value="buscar">
+                    </form>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% block busqueda %}
+
+            {% for post in posts %}
+
+            <tr>
+                <td>{{post.post_date}}</td>
+                <td>{{post.post_author}}</td>
+                <td>{{post.post_title}}</td>
+                <td>{{post.post_content}}</td>
+            </tr>
+
+            {% endfor %}
+
+            {% endblock %}
+
+        </tbody>
+    </table>
+</section>
+
+
+{% endblock %}

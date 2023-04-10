@@ -1,0 +1,48 @@
+.registro-formulario{
+    width: 300px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.registro-formulario input{
+    border: none;
+    outline: none;
+    padding: 3px;
+}
+
+.registro-formulario input[type='submit']{
+    background-color: #fff;
+    padding: 10px;    
+    margin-top: 10px;
+
+    cursor: pointer;
+
+    background-color: #a73737;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.registro-formulario input[type='submit']:hover{
+    color: #a73737;
+    border: #a73737 1px solid;
+    background-color: #fff;
+}
+
+/* LABEL / INPUT */
+
+.registro-formulario p{
+    display: flex;
+    flex-direction: column;
+}
+
+.registro-formulario p > label{
+    color: #999;
+}
+
+.registro-formulario p > input{
+    color: #a73737;
+    border: #a73737 1px solid;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 5px 0px 10px 0px;
+}

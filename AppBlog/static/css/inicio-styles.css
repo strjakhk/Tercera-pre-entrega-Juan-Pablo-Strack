@@ -1,0 +1,91 @@
+.main-content{
+    margin: auto;
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 940px;
+}
+
+.post-list thead, .post-list tbody, .user-list thead, .user-list tbody{
+    display: block; /* esto hace que tbody y thead se salgan del flujo de la tabla */
+}
+
+/* POST LIST */
+
+.post-list{
+    flex: 3;
+}
+
+.post-list tbody{
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.post-list th{
+    background-color: #a73737;
+    padding: 5px;
+    color: #fff;
+    font-family: RobotoMono-Light;
+}
+
+.post-list td{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+
+/* th filter */
+
+.th-filter{
+    background-color: #fff !important;
+    padding: 0px !important;
+    color: #555 !important;
+
+    display: block;
+    height: 30px;
+}
+
+.th-filter form{
+    height: 100%;
+}
+
+.th-filter form input{
+    height: 100%;
+    outline: none;
+    padding: 3px;
+    color: #555;
+}
+
+.th-filter form input[type="submit"]{
+    background-color: #fff;
+    border: #a73737 1px solid;
+    cursor: pointer;
+}
+
+/* USER LIST */
+
+.user-list{
+    flex: 1;
+}
+
+.user-list th{
+    background-color: #a73737;
+    padding: 5px;
+    color: #fff;
+    font-family: RobotoMono-Light;
+}
+
+.user-list td{
+    background-color: #555;
+    padding: 5px;
+}
+
+.user-list td > span{
+    color: greenyellow;
+}

@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block main_content %}
+
+<h1 class="title">Publicar comentario</h1>
+
+<form action="" method="post" class="comment-form"> {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="publicar">
+
+</form>
+
+{% endblock %}
